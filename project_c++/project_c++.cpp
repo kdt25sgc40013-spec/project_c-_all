@@ -2,17 +2,17 @@
 //
 
 #include <iostream>
-
-// コンストラクタ
-// ファクトリーパターン
-//  データテーブル
+#include"Factory.h"
+// コンストラクタ         ○
+// ファクトリーパターン   ○
+//  データテーブル        ○
 //  シングルトン
 //  有限状態機械
 //  オブジェクトプール
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Enemy* enemy = Enemy_Factory::Create(0);
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
