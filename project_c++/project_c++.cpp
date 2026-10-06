@@ -3,6 +3,13 @@
 
 #include <iostream>
 
+// コンストラクタ
+// ファクトリーパターン
+//  データテーブル
+//  シングルトン
+//  有限状態機械
+//  オブジェクトプール
+
 int main()
 {
     std::cout << "Hello World!\n";
