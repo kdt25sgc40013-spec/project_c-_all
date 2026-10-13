@@ -16,6 +16,7 @@ public:
 			return new Dragon();
 		default:
 			return nullptr;
+
 		}
 	}
 };

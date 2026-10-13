@@ -14,33 +14,26 @@ class Enemy
 
 
 public:
-
-    //  敵の情報をここでコンストラクタ
-	Enemy(std::string NAME,int ID, int HP, int ATK):Em_name(NAME),Em_ID(ID),Em_HP(HP),Em_ATK(ATK){
-		Em_name = NAME;
-		Em_ID = ID;
-		Em_HP = HP;
-		Em_ATK = ATK;
-	}
+    Enemy(const char* NAME, int ID, int HP, int ATK) : Em_name(NAME), Em_ID(ID), Em_HP(HP), Em_ATK(ATK) {}
 
 	//	仮想デストラクタを追加することで、派生クラスのデストラクタが正しく呼び出されるようにする。
 	virtual ~Enemy() = default;
 
 };
 
-class Slime :public Enemy {
+class Slime : public Enemy {
+
 public:
-	Slime() :Enemy(Slime_Name, Slime_ID, Slime_HP, Slime_ATK){
-		// Enemyクラスのコンストラクタを呼び出す
-	}
-	const std::string Slime_Name = "スライム";
-	const int Slime_ID = 0;
-	const int Slime_HP = 10;
-	const int Slime_ATK = 1;
+    Slime() : Enemy( Slime_Name, Slime_ID, Slime_HP, Slime_ATK) {}
+    inline static const std::string Slime_Name = "スライム";
+    static constexpr int Slime_ID = 0;
+    static constexpr int Slime_HP = 10;
+    static constexpr int Slime_ATK = 1;
 
 };
 
 class Goblin :public Enemy {
+
 public:
 	Goblin() :Enemy(Goblin_Name, Goblin_ID, Goblin_HP, Goblin_ATK){
 		// Enemyクラスのコンストラクタを呼び出す

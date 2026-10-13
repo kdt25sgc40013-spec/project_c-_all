@@ -129,6 +129,7 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Factory.h" />
     <ClInclude Include="Gamemaneger.h" />
+    <ClInclude Include="StringGuards.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
