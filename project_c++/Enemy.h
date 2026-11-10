@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+//	MVC　だと　modelにあたる部分
 class Enemy
 {
     // 敵の情報をまとめるクラス 

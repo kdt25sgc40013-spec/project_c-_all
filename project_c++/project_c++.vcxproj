@@ -123,7 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="project_c++.cpp" />
+    <ClCompile Include="GameCotroller.cpp" />
+    <ClCompile Include="GameModel.cpp" />
+    <ClCompile Include="GameView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h" />

@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include"Enemy.h"
 #include"Factory.h"
 // コンストラクタ         ○
 // ファクトリーパターン   ○

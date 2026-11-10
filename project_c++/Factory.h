@@ -1,5 +1,6 @@
 #pragma once
 #include "Enemy.h"
+//	MVC　だと　Modelにあたる部分
 
 // 敵の生成をまとめるクラス
 class Enemy_Factory {

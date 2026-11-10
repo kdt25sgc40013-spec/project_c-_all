@@ -1,6 +1,8 @@
 #pragma once
 //シングルトン：
 //ゲーム中に1個だけ存在してほしいオブジェクトを作るための考え方
+
+// MVCだとcontollerにあたる部分
 class GameManager
 {
 
