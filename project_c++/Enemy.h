@@ -61,5 +61,6 @@ public:
 	static constexpr int Dragon_ATK = 25;
 
 };
+//	ドラゴンのコンストラクター
 
 const std::string Dragon::Dragon_Name = "ドラゴン";

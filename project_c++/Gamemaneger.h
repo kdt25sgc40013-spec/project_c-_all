@@ -15,6 +15,7 @@ public:
 	GameManager& operator=(const GameManager&) = delete;
 
 	static GameManager& Instance() {
+		//	ゲームマネージャーのインスタンス
 		static GameManager instance;
 		
 		return instance;
