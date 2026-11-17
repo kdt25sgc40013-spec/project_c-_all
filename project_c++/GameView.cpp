@@ -32,12 +32,20 @@ int main()
 		case TITLE_MENU:
 			std::cout << "RPG" << std::endl;
 			//	1で０
-
+			int p = 0;
+			std::cout << "P:ゲームスタート" << std::endl;
+			std::cin >> p;
+			
+			if(p==1){
+				scene = GAME_MENU;
+			}
+			
 			//	値によって
 
 		break;
 		case GAME_MENU:		
 			std::cout << "GAME_MENU" << std::endl;
+
 
 		break;
 		case END_MENU:
