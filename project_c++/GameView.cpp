@@ -15,7 +15,7 @@ enum
 
 //	どの場面にいるかを判定
 int scene= TITLE_MENU;
-
+int input;
 // コンストラクタ         ○
 // ファクトリーパターン   ○
 //  データテーブル        ○
@@ -32,20 +32,16 @@ int main()
 		case TITLE_MENU:
 			std::cout << "RPG" << std::endl;
 			//	1で０
-			int p = 0;
-			std::cout << "P:ゲームスタート" << std::endl;
-			std::cin >> p;
 			
-			if(p==1){
+			std::cout << "1を押したらゲームメニューに" << std::endl;
+			std::cin >> input;
+			if (input == 1) {
 				scene = GAME_MENU;
 			}
 			
-			//	値によって
-
 		break;
 		case GAME_MENU:		
 			std::cout << "GAME_MENU" << std::endl;
-
 
 		break;
 		case END_MENU:
