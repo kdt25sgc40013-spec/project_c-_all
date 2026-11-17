@@ -4,9 +4,11 @@
 #include <iostream>
 #include"Enemy.h"
 #include"Factory.h"
+#include"Player.h"
 
 //	場面の切り替え
-enum
+
+enum class SCENE
 {
 	TITLE_MENU,
 	GAME_MENU,
@@ -14,7 +16,7 @@ enum
 };
 
 //	どの場面にいるかを判定
-int scene= TITLE_MENU;
+SCENE scene= SCENE::TITLE_MENU;
 int input;
 // コンストラクタ         ○
 // ファクトリーパターン   ○
@@ -27,28 +29,37 @@ int input;
 //  表示
 int main()
 {
-	//	文字を出す
-	switch (scene){
-		case TITLE_MENU:
-			std::cout << "RPG" << std::endl;
+	while (scene != SCENE::END_MENU) {
+		//	文字を出す
+		switch (scene) {
+		case SCENE::TITLE_MENU:
+			std::cout << "RPG:\n";
 			//	1で０
-			
-			std::cout << "1を押したらゲームメニューに" << std::endl;
+
+			std::cout << "1を押したらゲームメニューに:\n";
 			std::cin >> input;
 			if (input == 1) {
-				scene = GAME_MENU;
+				scene = SCENE::GAME_MENU;
+
 			}
+
+			break;
+		case SCENE::GAME_MENU:
+			std::cout << "GAME_MENU";
+			std::cin >> input;
+			//	プレイヤーのステータス表示
 			
-		break;
-		case GAME_MENU:		
-			std::cout << "GAME_MENU" << std::endl;
+			//	敵のステータス表示
+			
 
-		break;
-		case END_MENU:
-			std::cout << "END_MENU" << std::endl;
+			break;
+		case SCENE::END_MENU:
+			std::cout << "END_MENU";
+			std::cin >> input;
 
-		break;
+			break;
+		}
 	}
+		Enemy* enemy = Enemy_Factory::Create(0);
 	
-	Enemy* enemy = Enemy_Factory::Create(0);
 }
