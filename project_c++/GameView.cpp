@@ -47,6 +47,11 @@ int main()
 		case SCENE::GAME_MENU:
 			std::cout << "GAME_MENU";
 			std::cin >> input;
+
+			//	cin << 変数 << そこから条件を設定
+
+
+
 			//	プレイヤーのステータス表示
 			
 			//	敵のステータス表示
